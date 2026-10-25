@@ -1,0 +1,59 @@
+{
+  "id": "E072",
+  "slug": "eng-prandtl-number",
+  "title": "프란틀수 계산기",
+  "title_en": "Prandtl Number Calculator",
+  "category": "열",
+  "category_en": "Heat transfer",
+  "fields": [
+    {
+      "key": "mu",
+      "label": "점성계수 μ",
+      "label_en": "Dynamic viscosity μ",
+      "dimension": "viscosity",
+      "example": 0.001,
+      "constraint": "positive",
+      "display_unit": "mPas",
+      "display_value": "1"
+    },
+    {
+      "key": "cp",
+      "label": "정압 비열 c_p",
+      "label_en": "Specific heat at constant pressure c_p",
+      "dimension": "specificHeat",
+      "example": 4200,
+      "constraint": "positive",
+      "display_unit": "JkgK",
+      "display_value": "4200"
+    },
+    {
+      "key": "k",
+      "label": "열전도율 k",
+      "label_en": "Thermal conductivity k",
+      "dimension": "conductivity",
+      "example": 0.6,
+      "constraint": "positive",
+      "display_unit": "WmK",
+      "display_value": "0.6"
+    }
+  ],
+  "result_label": "프란틀수 Pr",
+  "result_label_en": "Prandtl number Pr",
+  "result_dimension": "ratio",
+  "formula": "Pr = μc_p/k",
+  "purpose": "운동량 확산과 열확산의 비율인 프란틀수 계산",
+  "purpose_en": "Calculate the ratio of momentum diffusivity to thermal diffusivity.",
+  "assumptions": "μ,c_p,k>0. 동일 유체·온도·압력의 물성을 사용한다. 점성계수 μ를 동점성계수 ν로 대신 넣지 않는다. 비뉴턴 유체의 유효 물성을 자동 추정하지 않는다.",
+  "assumptions_en": "Required: μ,c_p,k>0 for the same fluid state. μ is dynamic viscosity, not kinematic viscosity. Effective non-Newtonian properties are not estimated.",
+  "sources": [
+    {
+      "label": "MIT OCW · Engineering Heat Transfer · HT-22",
+      "url": "https://ocw.mit.edu/courses/16-050-thermal-energy-fall-2002/87d9f4544b7fd64a77201382500d057c_10_part3.pdf"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-prandtl-number/",
+  "repository": "https://github.com/NaNaCompany/eng-prandtl-number",
+  "output_unit": "1"
+}
